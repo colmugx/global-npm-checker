@@ -7,10 +7,11 @@ interface IAnswer {
 
 const GLOBAL = ['-g']
 const OUTDATED = GLOBAL.concat('outdated')
+const newSpawn = (opt: string[]) => spawnSync('npm', opt, { encoding : 'utf8' })
 const installPkg = (pkg: string) => GLOBAL.concat(['install', pkg])
 
 export default async function() {
-  const { stdout } = spawnSync('npm', OUTDATED, { encoding : 'utf8' })
+  const { stdout } = newSpawn(OUTDATED)
   const output = stdout.split('\n').slice(1)
   const apps = output
     .map(v => v.match(/^(\S*)\s+/))
@@ -37,7 +38,7 @@ export default async function() {
 
   packages.forEach(pkg => {
     try {
-      const { stdout } = spawnSync('npm', installPkg(pkg))
+      const { stdout } = newSpawn(installPkg(pkg))
       console.log(stdout.toString())
     } catch (err) {
       console.error(err)
