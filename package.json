@@ -5,6 +5,9 @@
   "bin": {
     "npm-checker": "lib/index.js"
   },
+  "scripts": {
+    "postinstall": "tsc"
+  },
   "keywords": [
     "colmugx",
     "npm-checker"
