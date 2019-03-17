@@ -1,0 +1,24 @@
+{
+  "name": "npm-checker",
+  "version": "0.0.1",
+  "description": "colmugx's npm global package checker",
+  "bin": {
+    "npm-checker": "lib/index.js"
+  },
+  "keywords": [
+    "colmugx",
+    "npm-checker"
+  ],
+  "author": "colmugx",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^6.2.2",
+    "yargs-parser": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "0.0.44",
+    "@types/node": "^11.11.3",
+    "@types/yargs-parser": "^11.0.2",
+    "typescript": "^3.3.3333"
+  }
+}
