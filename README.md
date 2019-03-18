@@ -1,5 +1,7 @@
 # global-npm-checker
 
+![screenshot.png](screenshot.png)
+
 从自用工具分离
 
 我知道有 `npm-check`，但它太强大了，我只需要用来检查哪些工具需要更新并直接更新即可
